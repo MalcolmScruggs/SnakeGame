@@ -1,0 +1,46 @@
+PROJECT BRIEF:
+
+---------------------------------
+PLAN:
+Create the classic game of snake but with extra features.
+
+Feature ideas:
+- convert dead snake into PShape
+- create heatmap of where the snake has been
+- draw mode
+- create gui
+
+How requirements are met:
+    • Interactivity and motion for 1 minute - playing the game
+
+    • Start and Reset Button/Trigger - reset key setting game values
+
+    • Use mouse and keyboard events to change properties - gui / controls of other features
+
+    • Must use at least 3 event listeners - not sure what this requires exactly
+
+    • Must use good variable, function, class, and object names - no Explanation
+
+    • Proper Encapsulation - Put all code for snake game into its own package and
+        separated by class. Structuring rendering and gui may not be able to be packaged
+        due to processing's logic execution. (correct interpretation of encapsulation?)
+
+    • At least 1 custom PShape - dead snake feature.
+-----------------------------------------
+RISKS:
+
+Snake:
+- Tight coupling with Processing
+    - collisions shouldn't depend on rendering
+    - representing grid + collisions
+
+Features:
+- Converting snakes to PShape and not messing up X-Y values / sizes.
+- Creating a massive file that's too hard to follow
+    - creating a rediculous ammout of booleans to determine state
+- Resizing screen may be impossible if a heatmap is to be implemented
+- Handling all settings. (ie. mouse off when in game / on otherwise).
+- Debugging - how to test in w/ processing
+- How to create a heatmap?
+
+----------------------------------------------------

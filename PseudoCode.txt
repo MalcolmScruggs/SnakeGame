@@ -1,0 +1,59 @@
+CLASSES:
+Snake:
+    -Snake
+    -Food
+    -Cell
+Main:
+    -Main class (may need helpers)
+    -GUI class (may need helpers)
+
+-----------------------------------------------------
+
+REQUIRED PARAMATERS:
+
+Snake: (represent with smaller logical grid scaled for rendering)
+    -list of cells
+    -direction
+    -cordinates
+
+Cells:
+    -cordinates
+
+Main:
+    -booleans for states (game is active, game is paused, display diffrent features)
+    -width, height, and scaling for grid used by snake
+    -colors
+    -Snake
+    -heatmap data
+
+----------------------------------------------------
+
+REQUIRED METHODS:
+
+Snake:
+    -move
+    -collisions
+    -eating food
+    -adding cells
+    -walls
+
+Cells:
+    -none
+
+Main:
+    -setup
+    -draw (broken up into diffrent methods based off state)
+    -mousePressed
+    -keyPressed
+
+-------------------------------------------------------
+
+FLOW CHART / USER STORY:
+
+GUI SCREEN (user decides settings / looks at controls) <--
+ |                                                       |
+ |                                                       |
+ ---> play game of snake --> die                         |
+                    ^          |                         |
+                    |          |                         |
+                  restart -----|----- view heatmap / dead snake / go to GUI

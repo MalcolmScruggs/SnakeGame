@@ -1,0 +1,9 @@
+How to use:
+1: unzip
+2: make a project (make sure that included jars are included in project)
+3: run by calling main in SnakeGame.java as run configuration
+
+
+lib folder contains all required jars to run processing
+src folder contains all source code
+Javadocs folder contains the html version of documentation

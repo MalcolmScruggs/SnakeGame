@@ -1,0 +1,67 @@
+POSTMORTEM
+
+Summary:
+    From the project brief my final product ended up implementing all but one
+feature idea. The end product included converting and storing the dead snake, a heatmap,
+the game of snake, and a GUI. The only feature that wasn't implemented was a draw mode.
+Overall I think that the project came together very well. The game meets
+all the requirements and is not buggy (at least I don't think so). Overall it was
+fun to make but also challenging to make sure that all the different components mixed
+well.
+
+Instructions:
+  - see Instructions.txt for running project
+  - click on buttons on start screen
+    - instructions brings up game controls
+    - walls kill is a toggle button
+    - start game starts the game
+
+Controls are
+   w a s d to move
+   r to reset
+   p to pause
+   h to show heatmap
+   j to show dead snakes
+   g to show gui
+
+Incomplete Features:
+ - none
+
+
+Biggest trouble area:
+    The hardest feature for me to make was converting the dead snake into a PShape.
+It was the hardest because I was unfamiliar with how PShapes worked and it was
+confusing on how to correctly set up a PShape to contain multiple things. For example
+it wasn't clear that to create the group PShape it had to be declared as a GROUP to begin
+with, and it was confusing to understand how CreateShape worked. It ended up being simple
+with it being the same as the other shapes but with a integer constant tag infront with
+the same parameters. Figuring out all of this was difficult however because the documentation
+was kind of hard to find, buried through a chain of pages in the processing reference. In the end
+it worked out well and it works exactly how i wanted, but it was the most difficult/frustrating
+thing to figure out.
+
+Best feature:
+Why:
+   I think that the best feature / most interesting part is the heatmap. It isn't the most
+complicated or interactive aspect, but I think it's the coolest part and it what makes my
+snake game unique. It's the most interesting because it lets you analyze how you were playing snake.
+It's especially interesting to compare how the heat map looks after playing with walls on vs walls off.
+Another reason I like it is because after a long game, you can show the dead snake and see where you
+died in comparison to where you went the most. The final thing I like about the heat map is that
+when playing toggling it on lets you draw things that change color the more you draw. Essentially,
+the heat map implementation created a form of the draw mode that I had originally though about
+creating.
+
+Analysis:
+    Implementation wise I think that the heatmap feature is done well. It works as intended
+and is not very complicated. Storing all the locations in a two dimensional array that
+represents the snake game grid is a good way to store all of the values. With the grid
+created getting the color is then straight forward due to the helper class HeatMapColorUtils.
+The strategy for creating the colors is good because it will work for any range of values,
+and any size square grid. I decided to have it create only 7 colors, but it would have
+been possible to create and equation that would have created far more. I think this was a
+good choice because it kept things simple, but also because it made the heatmap fit in
+with the style of the game. The only flaw with the heatmap, comes when is is the base
+layer and white text is added on top so it is hard to read. However this is a minor issue
+and is more the fault of not adding background color boxes behind text. Overall, I think
+that the heatmap was a complete success.
